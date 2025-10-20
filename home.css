@@ -1,0 +1,149 @@
+/* css/home.css */
+
+/* --- Variáveis (apenas para referência, os globais estão em style.css) --- */
+/* :root {
+    --color-primary: #007ACC; 
+    --color-background: #F4F4F4; 
+    --color-white: #ffffff;
+} */
+
+/* --- 1. Seção Hero --- */
+.hero {
+    background-color: var(--color-white);
+    padding: 80px 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: var(--color-primary);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botão secundário para a Hero */
+.cta-secondary-button {
+    display: inline-block;
+    color: var(--color-primary);
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+}
+
+.cta-secondary-button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* --- 2. Seção de Foco/Vantagens --- */
+.focus-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.focus-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px); /* Efeito sutil de elevação */
+}
+
+.feature-item h3 {
+    margin-top: 0;
+}
+
+/* --- 3. Seção Chamada para Ação Final --- */
+.cta-final {
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+.cta-final h2 {
+    color: var(--color-white); /* Garante que o título seja branco */
+    font-size: 2em;
+}
+
+.cta-final p {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.cta-final .cta-main-button {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+.cta-final .cta-main-button:hover {
+    background-color: var(--color-light-gray);
+}
+
+.cta-final .cta-secondary-button {
+     /* Reutilizando a classe, mas adaptando as cores para o fundo azul */
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+    margin-left: 15px;
+}
+
+.cta-final .cta-secondary-button:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+
+/* --- Media Queries (Responsividade) --- */
+@media (max-width: 600px) {
+    .hero {
+        padding: 50px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .cta-buttons a {
+        display: block; /* Botões empilhados no mobile */
+        width: 100%;
+        margin: 10px 0;
+    }
+}
