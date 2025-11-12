@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workspace - PrintForge</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/workspace.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="workspace-body">
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="img/Black and White Modern Personal Brand Logo (1).png" alt="PrintForge" class="sidebar-logo">
+            <span>PrintForge</span>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li class="menu-item active">
+                <a href="#projetos">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Projetos</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#financeiro">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Financeiro</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#agenda">
+                    <i class="fas fa-calendar"></i>
+                    <span>Agenda</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#editor">
+                    <i class="fas fa-code"></i>
+                    <span>Editor</span>
+                </a>
+            </li>
+            
+            <li class="menu-item logout-item">
+                <a href="index.html" class="logout-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Sair</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <img src="img/219eaea67aafa864db091919ce3f5d82.jpg" alt="Avatar" class="user-avatar">
+                <div class="user-info">
+                    <span class="user-name">João Desenvolvedor</span>
+                    <span class="user-status">Freelancer Ativo</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="workspace-main">
+        <header class="workspace-header">
+            <h1>Workspace Freelancer</h1>
+            <div class="header-actions">
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                </div>
+                </div>
+        </header>
+
+        <section id="projetos" class="workspace-section active">
+            <h2>Projetos Disponíveis</h2>
+            <div class="search-filters">
+                <input type="text" placeholder="Buscar por tecnologia, orçamento...">
+                <select>
+                    <option value="">Filtrar por Status</option>
+                    <option value="aberto">Aberto</option>
+                    <option value="em-andamento">Em Andamento</option>
+                    <option value="concluido">Concluído</option>
+                </select>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-filter"></i> Filtrar
+                </button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-status="aberto">
+                    <div class="project-header">
+                        <h3>Landing Page Responsiva</h3>
+                        <span class="project-budget">R$ 1.500,00</span>
+                    </div>
+                    <p class="project-description">
+                        Desenvolvimento de uma landing page moderna utilizando HTML, CSS (SASS) e JavaScript puro.
+                    </p>
+                    <div class="project-details">
+                        <span><i class="fas fa-code"></i> HTML/CSS/JS</span>
+                        <span><i class="fas fa-clock"></i> 7 dias</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-eye"></i> Ver Detalhes
+                        </button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-heart"></i> Favoritar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-status="em-andamento">
+                    <div class="project-header">
+                        <h3>API de Autenticação Segura</h3>
+                        <span class="project-budget">R$ 4.000,00</span>
+                    </div>
+                    <p class="project-description">
+                        Criação de uma API RESTful para autenticação de usuários (JWT), com foco em segurança e validação JSON.
+                    </p>
+                    <div class="project-details">
+                        <span><i class="fas fa-server"></i> Node.js/Segurança</span>
+                        <span><i class="fas fa-clock"></i> 20 dias</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-tools"></i> Acompanhar
+                        </button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-comment"></i> Mensagem
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="financeiro" class="workspace-section">
+            <h2>Dashboard Financeiro</h2>
+            <div class="finance-cards">
+                <div class="finance-card">
+                    <div class="finance-icon"><i class="fas fa-wallet"></i></div>
+                    <div class="finance-info">
+                        <h3>Ganhos no Mês</h3>
+                        <span class="amount">R$ 5.500,00</span>
+                    </div>
+                </div>
+                <div class="finance-card">
+                    <div class="finance-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <div class="finance-info">
+                        <h3>A Receber</h3>
+                        <span class="amount">R$ 2.500,00</span>
+                    </div>
+                </div>
+                <div class="finance-card">
+                    <div class="finance-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="finance-info">
+                        <h3>Projetos Concluídos</h3>
+                        <span class="amount">12</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h3>Histórico de Ganhos (Últimos 6 meses)</h3>
+                <div id="finance-chart" style="min-height: 300px; background: var(--bg-primary); border-radius: 10px; padding: 1rem;">
+                    <p style="text-align: center; padding-top: 50px; color: var(--text-secondary);">Gráfico de linhas (Simulação)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="agenda" class="workspace-section">
+            <h2>Agenda e Tarefas</h2>
+            <div class="calendar-todo">
+                <div class="calendar">
+                    <h3>Calendário de Entregas</h3>
+                    <div id="calendar-widget">
+                        <p>Simulação de um calendário interativo</p>
+                    </div>
+                </div>
+                
+                <div class="todo-list">
+                    <h3>Minhas Tarefas (To-Do)</h3>
+                    <div class="todo-input">
+                        <input type="text" id="new-todo" placeholder="Nova tarefa..." class="form-control">
+                        <button class="btn btn-primary" id="add-todo">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <ul class="todo-items">
+                        <li class="todo-item">
+                            <input type="checkbox">
+                            <span>Revisar código do projeto X</span>
+                            <i class="fas fa-trash"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="editor" class="workspace-section">
+            <h2>Editor de Código Online</h2>
+            <div class="editor-container">
+                <div class="editor-header">
+                    <span>VS Code Web - PrintForge</span>
+                    <div class="editor-actions">
+                        <button class="btn btn-outline">
+                            <i class="fas fa-play"></i> Executar
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-save"></i> Salvar
+                        </button>
+                    </div>
+                </div>
+                <div class="code-editor">
+                    <textarea id="code-input" placeholder="// Comece a codificar...">function helloPrintForge() {
+    console.log("Bem-vindo ao editor integrado!");
+}</textarea>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/workspace.js"></script>
+</body>
+</html>
