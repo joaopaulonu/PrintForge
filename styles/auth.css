@@ -1,0 +1,325 @@
+/* auth.css - Completo e com as melhorias visuais (no padrão PrintForge) */
+
+.auth-body {
+    background: var(--bg-primary);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.auth-container {
+    background: var(--bg-secondary);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow); /* Padrão de sombra */
+    width: 100%;
+    max-width: 500px;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.back-home {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.back-home:hover {
+    color: var(--primary-blue);
+}
+
+.logo-auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.logo-auth img {
+    height: 50px;
+}
+
+.logo-auth h1 {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Tabs de Login */
+.auth-tabs {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--bg-primary);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-weight: 600;
+    transition: var(--transition);
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--primary-blue);
+}
+
+/* Conteúdo do Formulário */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+}
+
+/* Botões de Login Social */
+.social-login {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-btn {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra mais suave para os botões */
+}
+
+/* Estilos de Cor Específicos para os Botões Sociais */
+.social-btn.github {
+    background-color: #333;
+}
+
+.social-btn.outlook {
+    background-color: #0072c6;
+}
+
+.social-btn.linkedin {
+    background-color: #0a66c2;
+}
+
+.social-btn:hover {
+    filter: brightness(1.1); /* Efeito de brilho ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+/* Divisor "ou use email" */
+.divider {
+    position: relative;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--text-secondary);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.divider span {
+    background: var(--bg-secondary);
+    padding: 0 1rem;
+    position: relative;
+    color: var(--text-secondary);
+    z-index: 2;
+}
+
+/* Campos de Formulário */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--bg-secondary); /* Borda mais suave e integrada */
+    background: var(--bg-input); /* ATUALIZADO: Usando o novo fundo de input */
+    color: var(--text-primary);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3); /* Efeito de foco padrão */
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.checkbox input {
+    height: 18px;
+    width: 18px;
+}
+
+.forgot-password {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text-secondary);
+}
+
+.auth-switch .switch-link {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-switch .switch-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de Feedback (Erros e Loading) */
+
+.error-message {
+    background: var(--danger);
+    color: var(--white);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.3s ease;
+}
+
+/* Loading Overlay (Aparência no padrão PrintForge) */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7); /* Background escuro para destacar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loading-spinner {
+    background: var(--bg-secondary);
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    text-align: center;
+    color: var(--text-primary);
+    box-shadow: var(--shadow);
+}
+
+.loading-spinner i {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.loading-spinner p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 1.5rem;
+    }
+
+    .social-login {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - PrintForge</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="assets/logo.png" alt="PrintForge" class="logo-img">
+                <span class="logo-text">PrintForge</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li>
+                <li><a href="login.html" class="nav-link login-btn">Entrar</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-main">
+        <div class="container">
+            <h1 class="blog-title">Blog PrintForge</h1>
+            <p class="blog-subtitle">Artigos educacionais sobre HTML, CSS, JavaScript e Segurança</p>
+
+            <div class="filter-bar">
+                <button class="filter-btn active">Todos</button>
+                <button class="filter-btn">JavaScript</button>
+                <button class="filter-btn">Segurança</button>
+                <button class="filter-btn">Carreira</button>
+            </div>
+
+            <div class="blog-grid">
+                <article class="blog-card" data-category="javascript">
+                    <div class="blog-card-header">
+                        <span class="category-badge javascript">JavaScript</span>
+                        <time datetime="2024-01-15">15 Jan 2024</time>
+                    </div>
+                    <h3 class="blog-card-title">Event Loop: Entendendo a Assincronicidade</h3>
+                    <p class="blog-card-excerpt">
+                        Um mergulho profundo no Event Loop do JavaScript e como ele gerencia tarefas assíncronas.
+                    </p>
+                    <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="blog-card" data-category="carreira">
+                    <div class="blog-card-header">
+                        <span class="category-badge career">Carreira</span>
+                        <time datetime="2024-01-10">10 Jan 2024</time>
+                    </div>
+                    <h3 class="blog-card-title">Como Cobrar por Projetos Freelancer</h3>
+                    <p class="blog-card-excerpt">
+                        Dicas e métodos para calcular o valor justo do seu trabalho como desenvolvedor freelancer.
+                    </p>
+                    <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="blog-card" data-category="javascript">
+                    <div class="blog-card-header">
+                        <span class="category-badge javascript">JavaScript</span>
+                        <time datetime="2024-01-05">05 Jan 2024</time>
+                    </div>
+                    <h3 class="blog-card-title">Async/Await: Dominando Promises</h3>
+                    <p class="blog-card-excerpt">
+                        Entenda como usar async/await para escrever código assíncrono mais limpo e legível.
+                    </p>
+                    <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="blog-card" data-category="segurança">
+                    <div class="blog-card-header">
+                        <span class="category-badge security">Segurança</span>
+                        <time datetime="2024-01-01">01 Jan 2024</time>
+                    </div>
+                    <h3 class="blog-card-title">Validação JSON: Prevenindo Ataques</h3>
+                    <p class="blog-card-excerpt">
+                        Técnicas avançadas para validar e sanitizar dados JSON em suas aplicações.
+                    </p>
+                    <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 PrintForge. Conhecimento que transforma código.</p>
+        </div>
+    </footer>
+
+    <script src="js/blog.js"></script>
+    <script src="js/main.js"></script> </body>
+</html>
