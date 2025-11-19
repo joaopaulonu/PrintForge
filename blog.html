@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!--Documento em HTML5-->
     <meta charset="UTF-8">
+    <!--Disponibilidade para mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titulo na aba do navegador-->
     <title>Blog - PrintForge</title>
+
+    <!--Estilo do arquivo importado-->
     <link rel="stylesheet" href="styles/main.css">
+    <!--Fonte Awesome-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!--Cabeçalho principal-->
     <header class="header">
         <nav class="nav">
+            <!--Logo e nome-->
             <div class="logo">
                <img src="img/Black and White Modern Personal Brand Logo (1).png" alt="PrintForge" class="logo-img">
                 <span class="logo-text">PrintForge</span>
             </div>
+            <!--Navegação principal na tela-->
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="blog.html" class="nav-link active">Blog</a></li>
                 <li><a href="contato.html" class="nav-link">Contato</a></li>
                 <li><a href="login.html" class="nav-link login-btn">Entrar</a></li>
             </ul>
+
+            <!--Claro/Escuro - Tema-->
             <div class="theme-toggle">
                 <i class="fas fa-moon" id="theme-icon"></i>
             </div>
+            <!--Hamburguer menu-->
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
         </nav>
     </header>
 
+    <!--Conteudo da página Blog-->
     <main class="blog-main">
         <div class="container">
+            <!--Título-->
             <h1 class="blog-title">Blog PrintForge</h1>
+            <!--Descrição da página em subtítulo-->
             <p class="blog-subtitle">Artigos educacionais sobre HTML, CSS, JavaScript e Segurança</p>
 
+            <!--Filtros de categorias e botões-->
             <div class="filter-bar">
                 <button class="filter-btn active">Todos</button>
                 <button class="filter-btn">JavaScript</button>
@@ -41,19 +57,26 @@
                 <button class="filter-btn">Carreira</button>
             </div>
 
+            <!--Grid/Organização dos cards dos artigos-->
             <div class="blog-grid">
                 <article class="blog-card" data-category="javascript">
+                    <!--Categoria e data do card (artigo)-->
                     <div class="blog-card-header">
                         <span class="category-badge javascript">JavaScript</span>
                         <time datetime="2024-01-15">15 Jan 2024</time>
                     </div>
+                    <!--Titulo do artigo-->
+                    <!--Event Loop e categoria JavaSript-->
                     <h3 class="blog-card-title">Event Loop: Entendendo a Assincronicidade</h3>
+                    <!--Breve descrição e prévia do artigo-->
                     <p class="blog-card-excerpt">
                         Um mergulho profundo no Event Loop do JavaScript e como ele gerencia tarefas assíncronas.
                     </p>
+                    <!--´Ler Mais´: acesso completo ao conteúdo-->
                     <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
                 </article>
-
+                
+                <!--Artigo da categoria Carreira, título e breve descrição-->
                 <article class="blog-card" data-category="carreira">
                     <div class="blog-card-header">
                         <span class="category-badge career">Carreira</span>
@@ -63,9 +86,11 @@
                     <p class="blog-card-excerpt">
                         Dicas e métodos para calcular o valor justo do seu trabalho como desenvolvedor freelancer.
                     </p>
+                    <!--´Ler mais´-->
                     <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
                 </article>
 
+                <!--Categoria JavaScript-->
                 <article class="blog-card" data-category="javascript">
                     <div class="blog-card-header">
                         <span class="category-badge javascript">JavaScript</span>
@@ -77,7 +102,8 @@
                     </p>
                     <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
                 </article>
-
+                
+                <!--Categoria Segurança-->
                 <article class="blog-card" data-category="segurança">
                     <div class="blog-card-header">
                         <span class="category-badge security">Segurança</span>
@@ -93,13 +119,16 @@
         </div>
     </main>
 
+    <!--Rodapé/Footer-->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 PrintForge. Conhecimento que transforma código.</p>
         </div>
     </footer>
 
+    <!--Arquivo JS contendo a lógica do filtro da página-->
     <script src="js/blog.js"></script>
+    <!--Arquivo JS contendo conteúdo principal da página (tema, animações, menu, entre outros)-->
     <script src="js/main.js"></script> </body>
 
 </html>
