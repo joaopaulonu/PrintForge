@@ -4,9 +4,9 @@
 
 ## 🌟 Visão Geral do Projeto
 
-Este repositório contém o código-fonte do site institucional da **PrintForge**, uma startup focada em conectar talentos de **TI (Tecnologia da Informação)** e da **Comunidade Maker (prototipagem, robótica, manufatura)** a empresas que necessitam de soluções personalizadas e inovadoras.
+Este repositório contém o código-fonte do site institucional da **PrintForge**, uma startup focada em conectar talentos de **TI (Tecnologia da Informação)** e da **Comunidade Maker (prototipagem, robótica, manufatura)** a empresas que necessitam de soluções personalizadas e inovadoras. O projeto foi desenvolvido utilizando-se exclusivamente **HTML, CSS e JavaScript puros**, garantindo performance, leveza e um excelente exercício em fundamentos de desenvolvimento web. O site é totalmente **responsivo**, adaptando-se a dispositivos desktop, tablet e mobile.
 
-O projeto foi desenvolvido utilizando-se exclusivamente **HTML, CSS e JavaScript puros**, garantindo performance, leveza e um excelente exercício em fundamentos de desenvolvimento web. O site é totalmente **responsivo**, adaptando-se a dispositivos desktop, tablet e mobile.
+
 ---
 
 ## 🎯 Requisitos e Tecnologias
