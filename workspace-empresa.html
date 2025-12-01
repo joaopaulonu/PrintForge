@@ -1,33 +1,54 @@
 <!DOCTYPE html>
+<!-- HTML5 -->
 <html lang="pt-BR">
 <head>
+    <!-- UTF-8 -> HTML -->
     <meta charset="UTF-8">
+    <!-- responsividade em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da aba do navegador -->
     <title>Empresa - PrintForge</title>
+
+    <!-- arquivos CSS -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/workspace.css">
+
+    <!-- Fontes Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+<!-- body para estilo do workspace -->
 <body class="workspace-body">
+
+    <!-- Barra lateral-->
     <nav class="sidebar">
+        
+        <!-- Cabeçalho da sidebar contendo logo e nome -->
         <div class="sidebar-header">
+            <!-- Logo da empresa -->
             <img src="img/Black and White Modern Personal Brand Logo (1).png" alt="PrintForge" class="sidebar-logo">
+            <!-- Nome no sidebar -->
             <span>PrintForge</span>
         </div>
-        
+
+        <!-- Menu principal da barra lateral -->
         <ul class="sidebar-menu">
+
+            <!-- Item ativo do menu -->
             <li class="menu-item active">
                 <a href="#lançar-projeto">
+                    <!-- Ícone -->
                     <i class="fas fa-rocket"></i>
                     <span>Lançar Projeto</span>
                 </a>
             </li>
+
             <li class="menu-item">
                 <a href="#meus-projetos">
                     <i class="fas fa-briefcase"></i>
                     <span>Meus Projetos</span>
                 </a>
             </li>
+
             <li class="menu-item">
                 <a href="#freelancers">
                     <i class="fas fa-users"></i>
@@ -35,6 +56,7 @@
                 </a>
             </li>
 
+            <!-- Botão de saída -->
             <li class="menu-item logout-item">
                 <a href="index.html" class="logout-link">
                     <i class="fas fa-sign-out-alt"></i>
@@ -43,9 +65,13 @@
             </li>
         </ul>
 
+        <!-- Rodapé da barra lateral com os dados do usuário -->
         <div class="sidebar-footer">
+            <!-- Foto de usuário -->
             <div class="user-profile">
                 <img src="img/219eaea67aafa864db091919ce3f5d82.jpg" alt="Avatar" class="user-avatar">
+
+                <!-- Nome e status da conta -->
                 <div class="user-info">
                     <span class="user-name">TechSolutions S.A.</span>
                     <span class="user-status">Conta Empresarial</span>
@@ -54,50 +80,70 @@
         </div>
     </nav>
 
+    <!-- Área principal de conteúdo com interatividade --->
     <main class="workspace-main">
+
+        <!-- Cabeçalho do workspace -->
         <header class="workspace-header">
             <h1>Workspace Empresa</h1>
+
+            <!-- Ações rápidas no topo, como notificações -->
             <div class="header-actions">
                 <div class="notifications">
                     <i class="fas fa-bell"></i>
                 </div>
-                </div>
+            </div>
         </header>
 
+        <!-- Seção de formulário de publicação de projeto -->
         <section id="lançar-projeto" class="workspace-section active">
             <h2>Publicar Novo Projeto</h2>
+
+            <!-- Formulário de criação de novo projeto -->
             <form class="project-form">
+
                 <div class="form-group">
                     <label for="project-title">Título do Projeto</label>
+                    <!-- Campo de texto obrigatório-->
                     <input type="text" id="project-title" required>
                 </div>
 
+                <!-- Área de texto para descrição -->
                 <div class="form-group">
                     <label for="project-description">Descrição Detalhada</label>
                     <textarea id="project-description" rows="5" required></textarea>
                 </div>
 
+                <!-- linha com 2 campos lado a lado -->
                 <div class="form-row">
+
                     <div class="form-group">
+                        <!--Orçamento-->
                         <label for="project-budget">Orçamento (BRL)</label>
                         <input type="number" id="project-budget" min="100" required>
+                        <!-- Orçamento mínimo: R$100 -->
                     </div>
-                    
+
+                    <!--Prazo de Entrega-->
                     <div class="form-group">
                         <label for="project-deadline">Prazo de Entrega (dias)</label>
                         <input type="number" id="project-deadline" min="1" required>
+                        <!-- Prazo mínimo: 1 dia -->
                     </div>
                 </div>
 
+                <!--Habilidades Chave-->
                 <div class="form-row">
                     <div class="form-group">
                         <label for="project-skills">Habilidades Chave (ex: React, Node.js)</label>
                         <input type="text" id="project-skills" required>
+                        <!-- Lista de habilidades-->
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="project-category">Categoria</label>
                         <select id="project-category" required>
+                            <!-- Seleção da área do projeto -->
                             <option value="">Selecione a Categoria</option>
                             <option value="frontend">Frontend</option>
                             <option value="backend">Backend</option>
@@ -109,37 +155,50 @@
                 </div>
 
                 <div class="form-options">
+                    <!-- Opções extras -->
+                     <!--Orçamento negociável-->
                     <label class="checkbox">
                         <input type="checkbox" id="budget-negotiable">
                         Orçamento Negociável
                     </label>
                 </div>
 
+                <!--Envio-->
                 <button type="submit" class="btn btn-primary">
+                    <!-- Botão de envio do formulário -->
                     <i class="fas fa-paper-plane"></i> Publicar Projeto
                 </button>
             </form>
         </section>
-
+        
+        <!-- Seção de projetos ativos -->
         <section id="meus-projetos" class="workspace-section">
             <h2>Meus Projetos Ativos</h2>
+            <!-- Lista que será preenchida dinamicamente (JavaScript) -->
             <div class="projects-list">
-                </div>
+            </div>
         </section>
 
+        <!-- Seção de freelancers disponíveis -->
         <section id="freelancers" class="workspace-section">
             <h2>Freelancers Disponíveis</h2>
+
+            <!-- Filtros de pesquisa -->
             <div class="search-filters">
                 <input type="text" placeholder="Buscar por habilidades...">
                 <select>
                     <option>Filtrar por especialidade</option>
                 </select>
             </div>
+
+            <!-- Grid para cards de freelancers -->
             <div class="freelancers-grid">
-                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Arquivo JS responsável pela lógica da página -->
     <script src="js/workspace-empresa.js"></script>
+
 </body>
 </html>
